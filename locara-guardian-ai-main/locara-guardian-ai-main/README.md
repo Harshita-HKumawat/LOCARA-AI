@@ -1,73 +1,117 @@
-# Welcome to your Lovable project
+# LOCARA-AI 🚨
 
-## Project info
+### AI Powered Women Safety & Smart Route Guardian
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+LOCARA-AI is an intelligent safety platform designed to enhance women's safety while traveling.
+It uses **AI, real-time reporting, and smart route insights** to identify unsafe areas and help users choose safer paths.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🌟 Problem Statement
 
-**Use Lovable**
+Many harassment or unsafe incidents go **unreported**, which means authorities do not know which areas are unsafe.
+As a result:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+* People unknowingly travel through risky routes
+* Police lack real-time data about unsafe locations
+* Women feel unsafe while traveling alone
 
-Changes made via Lovable will be committed automatically to this repo.
+LOCARA-AI aims to **collect anonymous safety signals and provide safer route insights**.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 💡 Solution
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+LOCARA-AI provides:
 
-Follow these steps:
+* 📍 **Crowdsourced safety reports**
+* 🧠 **AI-based safety analysis**
+* 🗺️ **Smart route risk detection**
+* 🚓 **Police dashboard for monitoring unsafe zones**
+* 🚨 **Quick incident reporting**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+The platform helps both **citizens and authorities** identify and respond to unsafe areas.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## ⚙️ Tech Stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Frontend:
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn UI
+
+Development Tools:
+
+* Node.js
+* npm
+
+---
+
+## 🧠 Key Features
+
+* Safety incident reporting
+* Risk heatmap visualization
+* Route safety analysis
+* Police monitoring dashboard
+* Real-time safety insights
+
+---
+
+## 🚀 How to Run the Project
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Harshita-HKumawat/LOCARA-AI.git
+```
+
+Navigate to project folder:
+
+```bash
+cd LOCARA-AI
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📌 Future Improvements
 
-**Use GitHub Codespaces**
+* AI based unsafe route prediction
+* Real-time emergency alerts
+* Integration with police systems
+* Mobile application version
+* Community safety scoring system
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 👥 Team
 
-This project is built with:
+**Team Name:** Ctrl+SHE
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**Team Members:**
 
-## How can I deploy this project?
+* Harshita Kumawat
+* Ashima Tiwari
+* Simran Bharti
+* Ayushi Rajpurohit
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## ⭐ Project Purpose
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project was built for a **hackathon innovation focused on improving public safety using AI and community data.**
