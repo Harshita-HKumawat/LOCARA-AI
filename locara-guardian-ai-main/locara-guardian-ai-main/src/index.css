@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 20% 98%;
+    --foreground: 260 30% 15%;
+
+    --card: 270 25% 97%;
+    --card-foreground: 260 30% 15%;
+
+    --popover: 270 25% 97%;
+    --popover-foreground: 260 30% 15%;
+
+    --primary: 280 40% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 50% 90%;
+    --secondary-foreground: 330 40% 30%;
+
+    --muted: 270 15% 93%;
+    --muted-foreground: 260 10% 45%;
+
+    --accent: 40 70% 60%;
+    --accent-foreground: 40 60% 15%;
+
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 15% 90%;
+    --input: 270 15% 88%;
+    --ring: 280 40% 55%;
+
+    --radius: 1rem;
+
+    /* Custom LOCARA tokens */
+    --lavender: 270 50% 65%;
+    --rose: 340 60% 65%;
+    --gold: 40 75% 58%;
+    --peach: 20 70% 80%;
+    --sky: 200 70% 70%;
+    --lilac: 280 30% 88%;
+    --charcoal: 260 20% 18%;
+    --midnight: 270 40% 12%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(270 50% 65% / 0.15), hsl(340 60% 65% / 0.1), hsl(40 75% 58% / 0.08));
+    --gradient-primary: linear-gradient(135deg, hsl(270 50% 65%), hsl(340 60% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(340 60% 65%), hsl(40 75% 58%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.7), hsl(0 0% 100% / 0.3));
+
+    --shadow-glow: 0 0 40px hsl(280 40% 55% / 0.15);
+    --shadow-card: 0 8px 32px hsl(270 50% 65% / 0.08);
+    --shadow-elevated: 0 16px 48px hsl(270 50% 65% / 0.12);
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl border border-white/30;
+    background: linear-gradient(135deg, hsl(0 0% 100% / 0.7), hsl(0 0% 100% / 0.3));
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-card);
+  }
+
+  .glass-card-strong {
+    @apply rounded-2xl border border-white/40;
+    background: linear-gradient(135deg, hsl(0 0% 100% / 0.85), hsl(0 0% 100% / 0.5));
+    backdrop-filter: blur(30px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    position: relative;
+    border: none;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-primary);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .glow-hover {
+    @apply transition-all duration-300;
+  }
+  .glow-hover:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .hero-gradient-bg {
+    background: var(--gradient-hero);
+  }
+
+  .stat-card {
+    @apply glass-card p-6 text-center glow-hover;
+  }
+
+  .section-padding {
+    @apply px-4 py-20 md:px-8 lg:px-16 xl:px-24;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
+  }
+}
